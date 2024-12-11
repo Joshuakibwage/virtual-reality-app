@@ -1,10 +1,19 @@
- 
+import Navbar from "./components/Navbar"
+import HeroSection from "./components/HeroSection"
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
+
+ const router = createBrowserRouter([
+  {
+    path:'/',
+    element:<><Navbar /><HeroSection /></>
+  }
+ ]);
 
 function App() {
 
   return (
     <>
-      <p className="bg-emerald-500">Hello world</p>
+        <RouterProvider router={router} />
     </>
   )
 }
