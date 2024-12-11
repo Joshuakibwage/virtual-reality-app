@@ -1,5 +1,5 @@
  import logo from "../assets/logo.png"
-//  import { Link } from "react-router-dom"
+ import { Link } from "react-router-dom"
 import {Menu, X} from "lucide-react";
 import { useState } from "react";
 
@@ -22,10 +22,10 @@ const Navbar = () => {
                     </div>
                 </div>
                 <ul className="hidden lg:flex ml-14 space-x-12 ">
-                    <li>Features</li>
-                    <li>Workflow</li>
-                    <li>Pricing</li>
-                    <li>Testimonials</li>
+                    <Link to='features'><li>Features</li></Link>
+                    <Link to='workflow'><li>Workflow</li></Link>
+                    <Link to='pricing'><li>Pricing</li></Link>
+                    <Link to='testimonials'><li>Testimonials</li></Link>
                 </ul>
                 <div className="hidden lg:flex justify-center space-x-12 items-center ">
                     <a href="#" className="py-2 px-3 border rounded-md">
@@ -45,10 +45,10 @@ const Navbar = () => {
             {isMenuOpen && (
                 <div className="left-0 z-20 bg-neutral-900 w-full text-center p-12 fixed flex flex-col justify-center items-center md:hidden">
                     <ul className=" text-xl font-semibold">
-                        <li className="pb-4">Features</li>
-                        <li className="py-4">Workflow</li>
-                        <li className="py-4">Pricing</li>
-                        <li className="pt-4">Testimonials</li>
+                        <Link to='features'><li className="pb-4">Features</li></Link>
+                        <Link to='workflow'><li className="py-4">Workflow</li></Link>
+                        <Link to='pricing'><li className="py-4">Pricing</li></Link>
+                        <Link to='testimonials'><li className="pt-4">Testimonials</li></Link>
                     </ul>
                     <div className="flex space-x-6 py-6">
                         <a href="#" className="py-2 px-3 border rounded-md ">
